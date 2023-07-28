@@ -29,8 +29,6 @@
 #define MCCONF_L_IN_CURRENT_MAX			250.0	// Input current limit in Amperes (Upper)
 #define MCCONF_L_IN_CURRENT_MIN			-200.0	// Input current limit in Amperes (Lower)
 
-#define CURRENT_ALU_200A
-
 #include "hw_ubox_100_core.h"
 
 #endif /* HW_UBOX_SINGLE_80_H_ */
