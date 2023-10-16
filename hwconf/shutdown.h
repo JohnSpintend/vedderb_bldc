@@ -29,7 +29,11 @@
 #define SHUTDOWN_BUTTON_PRESSED				shutdown_button_pressed()
 #define SHUTDOWN_SET_SAMPLING_DISABLED(d)	shutdown_set_sampling_disabled(d)
 #else
+#ifdef HW_UBOX_V2_100_CORE_H_
+#define SHUTDOWN_RESET()					shutdown_reset_timer()
+#else
 #define SHUTDOWN_RESET()
+#endif
 #define SHUTDOWN_BUTTON_PRESSED				false
 #define SHUTDOWN_SET_SAMPLING_DISABLED(d)
 #endif
