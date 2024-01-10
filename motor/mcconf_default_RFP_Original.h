@@ -36,25 +36,25 @@
 
 // Limits
 #ifndef MCCONF_L_CURRENT_MAX
-#define MCCONF_L_CURRENT_MAX			200.0	// Current limit in Amperes (Upper)
+#define MCCONF_L_CURRENT_MAX			60.0	// Current limit in Amperes (Upper)
 #endif
 #ifndef MCCONF_L_CURRENT_MIN
-#define MCCONF_L_CURRENT_MIN			-200.0	// Current limit in Amperes (Lower)
+#define MCCONF_L_CURRENT_MIN			-60.0	// Current limit in Amperes (Lower)
 #endif
 #ifndef MCCONF_L_IN_CURRENT_MAX
-#define MCCONF_L_IN_CURRENT_MAX			200.0	// Input current limit in Amperes (Upper)
+#define MCCONF_L_IN_CURRENT_MAX			99.0	// Input current limit in Amperes (Upper)
 #endif
 #ifndef MCCONF_L_IN_CURRENT_MIN
-#define MCCONF_L_IN_CURRENT_MIN			-100.0	// Input current limit in Amperes (Lower)
+#define MCCONF_L_IN_CURRENT_MIN			-60.0	// Input current limit in Amperes (Lower)
 #endif
 #ifndef MCCONF_L_MAX_ABS_CURRENT
-#define MCCONF_L_MAX_ABS_CURRENT		300.0	// The maximum absolute current above which a fault is generated
+#define MCCONF_L_MAX_ABS_CURRENT		130.0	// The maximum absolute current above which a fault is generated
 #endif
 #ifndef MCCONF_L_MIN_VOLTAGE
-#define MCCONF_L_MIN_VOLTAGE			12		// Minimum input voltage
+#define MCCONF_L_MIN_VOLTAGE			8.0		// Minimum input voltage
 #endif
 #ifndef MCCONF_L_MAX_VOLTAGE
-#define MCCONF_L_MAX_VOLTAGE			90	// Maximum input voltage
+#define MCCONF_L_MAX_VOLTAGE			57.0	// Maximum input voltage
 #endif
 #ifndef MCCONF_L_BATTERY_CUT_START
 #define MCCONF_L_BATTERY_CUT_START		10.0	// Start limiting the positive current at this voltage
@@ -102,10 +102,10 @@
 #define MCCONF_L_LIM_TEMP_ACCEL_DEC		0.15	// Decrease temperature limits this much during acceleration
 #endif
 #ifndef MCCONF_L_WATT_MAX
-#define MCCONF_L_WATT_MAX				15000.0	// Maximum wattage output
+#define MCCONF_L_WATT_MAX				1500000.0	// Maximum wattage output
 #endif
 #ifndef MCCONF_L_WATT_MIN
-#define MCCONF_L_WATT_MIN				-10000.0	// Minimum wattage output (braking)
+#define MCCONF_L_WATT_MIN				-1500000.0	// Minimum wattage output (braking)
 #endif
 #ifndef MCCONF_L_CURRENT_MAX_SCALE
 #define MCCONF_L_CURRENT_MAX_SCALE		1.0	// Maximum current scale
@@ -359,7 +359,7 @@
 #define MCCONF_FOC_HALL_INTERP_ERPM		500		// Do not interpolate hall sensors below this ERPM
 #endif
 #ifndef MCCONF_FOC_SL_ERPM
-#define MCCONF_FOC_SL_ERPM				3000.0	// ERPM above which only the observer is used
+#define MCCONF_FOC_SL_ERPM				2500.0	// ERPM above which only the observer is used
 #endif
 #ifndef MCCONF_FOC_SAMPLE_V0_V7
 #define MCCONF_FOC_SAMPLE_V0_V7			false	// Run control loop in both v0 and v7 (requires phase shunts)
@@ -386,7 +386,7 @@
 #define MCCONF_FOC_CC_DECOUPLING		FOC_CC_DECOUPLING_DISABLED // Current controller decoupling
 #endif
 #ifndef MCCONF_FOC_OBSERVER_TYPE
-#define MCCONF_FOC_OBSERVER_TYPE		FOC_OBSERVER_ORTEGA_ORIGINAL // Position observer type for FOC
+#define MCCONF_FOC_OBSERVER_TYPE		FOC_OBSERVER_MXLEMMING_LAMBDA_COMP // Position observer type for FOC
 #endif
 #ifndef MCCONF_FOC_HFI_VOLTAGE_START
 #define MCCONF_FOC_HFI_VOLTAGE_START	20 // HFI voltage at start when resolving ambiguity
@@ -569,22 +569,22 @@
 
 // Setup Info
 #ifndef MCCONF_SI_MOTOR_POLES
-#define MCCONF_SI_MOTOR_POLES			30 // Motor pole count
+#define MCCONF_SI_MOTOR_POLES			14 // Motor pole count
 #endif
 #ifndef MCCONF_SI_GEAR_RATIO
-#define MCCONF_SI_GEAR_RATIO			1 // Gear ratio
+#define MCCONF_SI_GEAR_RATIO			3 // Gear ratio
 #endif
 #ifndef MCCONF_SI_WHEEL_DIAMETER
-#define MCCONF_SI_WHEEL_DIAMETER		0.272 // Wheel Diameter
+#define MCCONF_SI_WHEEL_DIAMETER		0.083 // Wheel Diameter
 #endif
 #ifndef MCCONF_SI_BATTERY_TYPE
 #define MCCONF_SI_BATTERY_TYPE			BATTERY_TYPE_LIION_3_0__4_2 // Battery Type
 #endif
 #ifndef MCCONF_SI_BATTERY_CELLS
-#define MCCONF_SI_BATTERY_CELLS			20 // Battery Cells
+#define MCCONF_SI_BATTERY_CELLS			3 // Battery Cells
 #endif
 #ifndef MCCONF_SI_BATTERY_AH
-#define MCCONF_SI_BATTERY_AH			30 // Battery amp hours
+#define MCCONF_SI_BATTERY_AH			6.0 // Battery amp hours
 #endif
 #ifndef MCCONF_SI_MOTOR_NL_CURRENT
 #define MCCONF_SI_MOTOR_NL_CURRENT		1.0 // Motor no load current
