@@ -22,7 +22,7 @@
 
 #define HW_UBOX_SINGLE_85_200
 
-#define MCCONF_L_MAX_VOLTAGE	82.0
+#define MCCONF_L_MAX_VOLTAGE	90.0
 
 #define MCCONF_L_MAX_ABS_CURRENT		400	// The maximum absolute current above which a fault is generated
 #define MCCONF_FOC_SAMPLE_V0_V7			false	// Run control loop in both v0 and v7 (requires phase shunts)
